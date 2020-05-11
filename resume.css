@@ -1,0 +1,12 @@
+/*Ensuring high-contrast and accessable font sizes*/
+body {
+  background-color: black;
+  color: white;
+}
+
+a {
+  color: chartreuse
+}
+p {
+  font-size: 16px;
+}
