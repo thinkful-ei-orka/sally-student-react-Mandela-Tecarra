@@ -13,15 +13,19 @@
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script type="text/babel">
+
+
+
+
     // Our code will go here
     const appRoot = document.querySelector('#application-root');
-    const Resume = function () {return (
+    const Resume = function (props) {return (
     <section>
     <header>
-      <h1>Sally Jones</h1>
+      <h1>{props.name}</h1>
       <address className="contact">
-        <a href="mailto: sally.jones@truecalling.com ?subject=Interview%20With%2C%20Company%20Name"> Sally.Jones@truecalling.com</a><br />
-        <a href="tel:+13019324475">(301) 932-4475</a>
+        <a href="mailto: sally.jones@truecalling.com ?subject=Interview%20With%2C%20Company%20Name">{props.email}</a><br />
+        <a href="tel:+13019324475">{props.phoneNum}</a>
       </address>
     </header>
     <br />
@@ -54,7 +58,10 @@
     </main>
     </section>)}
 
-    ReactDOM.render(<Resume />, appRoot);
+    ReactDOM.render(<Resume 
+                      name="Sally Jones"
+                      email="Sally.Jones@truecalling.com"
+                      phoneNum="(301) 932-4475"/>, appRoot);
     </script>
 </body>
 </html>
